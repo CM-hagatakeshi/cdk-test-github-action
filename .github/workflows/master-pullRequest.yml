@@ -1,4 +1,4 @@
-name: app-CI-PullRequest
+name: app-CI-PullRequest(master)
 
 on:
   pull_request:
@@ -7,7 +7,6 @@ on:
     - 'resources/**'
     - 'lib/**'
     - 'cdk.json'
-
 
 jobs:
 
