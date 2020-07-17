@@ -6,6 +6,7 @@ on:
     paths:
     - 'resources/**'
     - 'lib/**'
+    - 'cdk.json'
 
 jobs:
 
