@@ -1,4 +1,4 @@
-name: app-CI
+name: app-CI-Push
 
 on:
   push:

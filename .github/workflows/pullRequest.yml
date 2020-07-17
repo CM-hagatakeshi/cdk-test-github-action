@@ -1,4 +1,4 @@
-name: app-CI
+name: app-CI-PullRequest
 
 on:
   pull_request:
