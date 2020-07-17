@@ -11,6 +11,14 @@
             "defaultTimeOut": 90,
             "logLevel": "DEBUG"
         }
+    },
+    "stg": {
+        "stage": "staging",
+        "lambda": {
+            "defaultMemorySize": 1024,
+            "defaultTimeOut": 200,
+            "logLevel": "INFO"
+        }
     }
   }
 }
