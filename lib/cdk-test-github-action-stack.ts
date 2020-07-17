@@ -43,7 +43,7 @@ export class CdkTestGithubActionStack extends cdk.Stack {
       code: lambda.Code.asset("./resources/cdkTestLambda"),
       handler: "cdkTestLambda.cdk_test_Lambda_handler",
       role: Lambda_ROLE,
-      a,
+      a
       environment:{
         "STAGE": this.node.tryGetContext(Naming.env).stage,
         "LOG_LEVEL": this.node.tryGetContext(Naming.env).lambda.logLevel,

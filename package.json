@@ -8,7 +8,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "cdkdiff:dev": "cdk diff CdkTestGithubActionStack  || true",
+    "cdkdiff:dev": "cdk diff CdkTestGithubActionStack",
     "cdk:diff": "cdk diff || true",
     "cdk:deploy": "cdk deploy --require-approval never",
     "deploy:dev": "cdk deploy CdkTestGithubActionStack",
