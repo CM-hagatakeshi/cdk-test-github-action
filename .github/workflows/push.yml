@@ -3,9 +3,9 @@ name: app-CI-Push
 on:
   push:
     branches: [ master ]
-    #paths:
-    #- 'resources/**'
-    #- 'lib/**'
+    paths:
+    - 'resources/**'
+    - 'lib/**'
 
 jobs:
 
