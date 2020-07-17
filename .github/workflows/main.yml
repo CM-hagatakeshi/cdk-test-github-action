@@ -3,8 +3,13 @@ name: app-CI
 on:
   push:
     branches: [ master ]
-  pull_request:
+    paths:
+    - '/resources/**'
+
+    pull_request:
     branches: [ master ]
+    paths:
+    - '/resources/**'
 
 jobs:
 
