@@ -8,11 +8,11 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "cdkdiff:dev": "cross-env ENV=dev cdk diff CdkTestGithubActionStack  || true",
+    "cdkdiff:dev": "cdk diff CdkTestGithubActionStack",
     "cdk:diff": "cdk diff || true",
     "cdk:deploy": "cdk deploy --require-approval never",
-    "deploy:dev": "cross-env ENV=dev cdk deploy CdkTestGithubActionStack",
-    "deploy:stg": "cross-env ENV=stg cdk deploy CdkTestGithubActionStack"
+    "deploy:dev": "cdk deploy CdkTestGithubActionStack",
+    "deploy:stg": "cdk deploy CdkTestGithubActionStack"
   },
   "devDependencies": {
     "@aws-cdk/aws-iam": "1.44.0",

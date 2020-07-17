@@ -46,6 +46,7 @@ export class CdkTestGithubActionStack extends cdk.Stack {
       environment:{
         "STAGE": this.node.tryGetContext(Naming.env).stage,
         "LOG_LEVEL": this.node.tryGetContext(Naming.env).lambda.logLevel,
+        "TEST": "TEST1",
       },
       runtime: this.LambdaDefaultRuntime,
       memorySize: this.node.tryGetContext(Naming.env).lambda.defaultMemorySize,
