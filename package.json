@@ -11,14 +11,15 @@
     "cdkdiff:dev": "cdk diff CdkTestGithubActionStack",
     "cdk:diff": "cdk diff || true",
     "cdk:deploy": "cdk deploy --require-approval never",
-    "deploy:dev": "cdk deploy CdkTestGithubActionStack",
-    "deploy:stg": "cdk deploy CdkTestGithubActionStack"
+    "deploy:dev": "cross-env ENV=dev cdk deploy CdkTestGithubActionStack",
+    "deploy:stg": "cross-env ENV=stg cdk deploy CdkTestGithubActionStack"
   },
   "devDependencies": {
     "@aws-cdk/aws-iam": "1.44.0",
     "@aws-cdk/aws-lambda": "1.44.0",
     "@types/node": "10.17.5",
     "aws-cdk": "1.44.0",
+    "cross-env": "^7.0.2",
     "ts-node": "^8.1.0",
     "typescript": "~3.7.2"
   },
