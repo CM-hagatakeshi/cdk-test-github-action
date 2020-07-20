@@ -38,3 +38,9 @@ jobs:
         AWS_DEFAULT_REGION: 'ap-northeast-1'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_TEST_DEV_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_TEST_DEV_SECRET }}
+
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@master
+      env:
+        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_WEBHOOK: ${{ secrets.CDK_TEST_SLACK_WEBHOOK }}

@@ -17,7 +17,7 @@ def cdk_test_Lambda_handler(event, context):
 def cdk_test_Lambda(event):
     logger.info('[START] cdk_test_Lambda')
 
-    logger.debug('Hallo World 10!!')
+    logger.debug('Hallo World 11!!')
 
     logger.info('[END] cdk_test_Lambda')
 
