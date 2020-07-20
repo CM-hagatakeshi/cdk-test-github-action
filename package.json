@@ -13,7 +13,7 @@
     "cdkdiff:stg": "cross-env ENV=stg cdk diff CdkTestGithubActionStack",
     "deploy:stg": "cross-env ENV=stg cdk deploy CdkTestGithubActionStack",
     "cdk:diff": "cdk diff || true",
-    "cdk:deploy": "cdk deploy --require-approval never",
+    "cdk:deploy": "cdk deploy --require-approval never"
   },
   "devDependencies": {
     "@aws-cdk/aws-iam": "1.44.0",
