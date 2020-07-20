@@ -41,7 +41,19 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_TEST_DEV_SECRET }}
 
     - name: Slack Notification
+      if: success()
       uses: rtCamp/action-slack-notify@master
       env:
-        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_USERNAME: 'Github Action - feature-push'
+        SLACK_MESSAGE: ':+1: Push Success'
+        SLACK_COLOR: 'good'
+        SLACK_WEBHOOK: ${{ secrets.CDK_TEST_SLACK_WEBHOOK }}
+
+    - name: Slack Notification
+      if: failure()
+      uses: rtCamp/action-slack-notify@master
+      env:
+        SLACK_USERNAME: 'Github Action - feature-push'
+        SLACK_MESSAGE: ':x: Push Failure'
+        SLACK_COLOR: 'danger'
         SLACK_WEBHOOK: ${{ secrets.CDK_TEST_SLACK_WEBHOOK }}
