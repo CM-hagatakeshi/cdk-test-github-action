@@ -42,7 +42,6 @@ export class CdkTestGithubActionStack extends cdk.Stack {
       functionName: Naming.of('cdkTestLambda'),
       code: lambda.Code.asset("./resources/cdkTestLambda"),
       handler: "cdkTestLambda.cdk_test_Lambda_handler",
-      a,
       role: Lambda_ROLE,
       environment:{
         "STAGE": this.node.tryGetContext(Naming.env).stage,
