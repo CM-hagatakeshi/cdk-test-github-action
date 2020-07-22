@@ -40,7 +40,7 @@ export class CdkTestGithubActionStack extends cdk.Stack {
     // Lambdaの作成
     const eventAggregator_LambdaHandler = new lambda.Function(this, "cdkTestLambdaHandler", {
       functionName: Naming.of('cdkTestLambda'),
-      code: lambda.Code.asset("./resources/cdkTestLambda"),
+      code: lambda.Code.asset("../resources/cdkTestLambda"),
       handler: "cdkTestLambda.cdk_test_Lambda_handler",
       role: Lambda_ROLE,
       environment:{

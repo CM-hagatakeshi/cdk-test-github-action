@@ -1,8 +1,9 @@
-name: app-CI-PullRequest(master)
+name: app-CI-Push(master)
 
 on:
-  pull_request:
-    branches: [ master ]
+  push:
+    branches:
+    - 'feature/**'
     paths:
     - 'resources/**'
     - 'lib/**/*.ts'
@@ -25,23 +26,16 @@ jobs:
         node-version: "12.x"
 
     - name: Setup dependencies
-      run: |
-        cd infrastructure
-        pwd
-        npm ci
+      run: npm ci
 
     - name: Build
-      run: |
-        cd infrastructure
-        npm run build
+      run: npm run build
 
     - name: CDK Diff Check
-      if: contains(github.event_name, 'pull_request')
-      run: |
-        cd infrastructure
-        npm run cdkdiff:stg
+      if: contains(github.event_name, 'push')
+      run: npm run cdkdiff:dev
       env:
-        ENV: 'stg'
+        ENV: 'dev'
         AWS_DEFAULT_REGION: 'ap-northeast-1'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_TEST_DEV_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_TEST_DEV_SECRET }}
