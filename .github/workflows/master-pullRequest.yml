@@ -25,7 +25,10 @@ jobs:
         node-version: "12.x"
 
     - name: Setup dependencies
-      run: npm ci
+      run: |
+        cd infrastructure
+        pwd
+        npm ci
 
     - name: Build
       run: npm run build
